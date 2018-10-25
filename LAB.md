@@ -82,6 +82,14 @@ Multiple Games!
 1. Allow user to play again
 1. Don't allow the play game button to be pressed if game is in progress
 
+## Table Stakes
+
+These must be in place for your lab to be graded:
+
+1. Commit history showing pairing
+1. Pass Travis
+1. Deployed GH Pages
+
 ## Rubric
 
 * Selects random word **2pts**
