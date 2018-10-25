@@ -1,13 +1,22 @@
+* { 
+    box-sizing: border-box;
+}
+
 #div-1 {
     background-color: green;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #div-2 {
     background-color: gray;
+    float: right;
 }
 
 #div-3 {
     background-color: blueviolet;
+
 }
 
 #div-4 {
