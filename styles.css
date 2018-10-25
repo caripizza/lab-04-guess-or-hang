@@ -1,0 +1,12 @@
+#div-1 {
+    background-color: green;
+}
+
+#div-2 {
+    background-color: gray;
+}
+
+.div-flex {
+    display: flex;
+    flex: 1;
+}
