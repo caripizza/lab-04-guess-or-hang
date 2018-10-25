@@ -1,24 +1,33 @@
-* { 
+/* * { 
     box-sizing: border-box;
-}
+} */
 
 #div-1 {
     background-color: green;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
 }
 
 #div-2 {
     background-color: gray;
-    float: right;
 }
 
 #div-3 {
     background-color: blueviolet;
+    height: 50vh;
 
 }
 
 #div-4 {
-    background-color: brown
+    background-color: brown;
+    height: 10vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10vh;
+  }
+
+header {
+    text-align: center;
 }
