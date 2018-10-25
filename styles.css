@@ -31,3 +31,8 @@
 header {
     text-align: center;
 }
+section #word-to-guess {
+    background-color: yellow;
+    display: flex;
+    justify-content: flex-end;
+}
