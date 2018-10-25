@@ -7,7 +7,7 @@ Create a word guessing game that:
 1. Allows the users to enter one letter "guess" at a time.
     1. If the guess is correct, show all occurances of that letter in the word
     1. If the guess is incorrect, add a body part to the gallows
-1. Show a list of all letters the user has guessed
+1. Keep track of guessed letters
 1. If the user guesses all of the letters in the word, let them know they have "won"
 1. If the user has enough incorrect guesses to reveal the whole body in the gallows, they "lose"
 
@@ -19,11 +19,13 @@ Your page needs to include the following parts:
 
 1. Gallows - displays the parts of the body as the user guesses incorrectly.
 2. Word to Guess - Blank lines for each letter in the word. Shows the letters when correctly guessed.
-    * Because we haven't got to dynamic element creation, you will need as many letters as your longest word.
-    * You can give an id like `letter-0`, `letter-1`, `letter-2`, etc. in order to address by index, i.e. 
-    `document.getElementById('letter-' + i)`
-3. Guess Letter - A form with an input and button for guessing a letter. You can use `maxlength="1"` attribute on the input
-to limit to one letter and `required` attribute to require at least one letter
+    * There are many ways to accomplish this
+    * One way:
+        * You will need as many letters as your longest word.
+        * You can give an id like `letter-0`, `letter-1`, `letter-2`, etc. 
+        * address by index, i.e. `document.getElementById('letter-' + i)`
+3. Guess Letter - A form with an input and button for guessing a letter. You can use `maxlength="1"` attribute on the input to limit to one letter and `required` attribute to require at least one letter
+    * Or you can come up with a different UI paradigm!
 4. Letters Guessed - A list of letters guessed so far (correct and incorrect)
 5. Number of Guesses - Shows how many total guesses have been made
 6. Message - A place to show messages (like win or lose)
@@ -59,7 +61,7 @@ Don't forget to include a script tag with `src` for this file.
     1. Otherwise:
         1. Letter is added to guessed letters
         1. Guess count is incremented
-        1. Guess Letter input is set to ''
+        1. Guess Letter input is reset to ''
         1. If word includes the letter (hint: string has an `includes` method):
             1. Letter(s) are revealed in Word to Guess
             1. Check for win condition (every letter of word is in guessed letters)
@@ -73,7 +75,24 @@ Don't forget to include a script tag with `src` for this file.
             
 ## Stretch Goals
 
+Multiple Games!
+
 1. Add a play game button that calls load word.
 1. Keep track of wins and loses
 1. Allow user to play again
 1. Don't allow the play game button to be pressed if game is in progress
+
+## Rubric
+
+* Selects random word **2pts**
+* Adjust "word guess" to right length and make correct guesses visibile **2pts**
+* Can guess a letter **2pt**
+* Tracks guessed letters **1pt**
+* Tracks total guesses **1pt**
+* Gallows displays incorrect guesses **2pt**
+* Track game win or lose **2pt**
+* Overall game play and creativity **2pt**
+* Clean, Semantic HTML and CSS **2pt**
+* Responsive Design **1pt**
+* Clean, well-named JavaScript with use of functions **2pts**
+* File naming and organization **1pt**
