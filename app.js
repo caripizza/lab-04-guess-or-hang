@@ -1,6 +1,7 @@
 
 // get a random number between 0-8!
 
+
 function randoWord() {
   function getRandomInt() {
   return Math.floor(Math.random() * 8 );
@@ -9,8 +10,11 @@ function randoWord() {
   return words[randoNum];
 }
 var guessMe = randoWord();
+var letterString = guessMe.split(', ');
 
-console.log(guessMe.length);
+console.log( letterString );
+
+
 
 //  2. select word from array - with that i
 
@@ -38,10 +42,10 @@ console.log(guessMe.length);
          i. message user win/lose
          ii. disable guess letter button    */    
 
-function guessTheWord() {
-  while (wrong-guesses <= 6) {
-    if (guess-entry == )
-  }
-}
+//function guessTheWord() {
+//  while (wrong-guesses <= 6) {
+//    if (guess-entry == )
+//  }
+//}
 
 // call 'loadWord' function to start things
