@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css" >
     <title>Lab 4: Hang Person Guessing Game</title>
 </head>
-<body>
+<body onload="draw();">
     <header>
         <h1>Hang Person Guessing Game</h1>
     </header>
@@ -26,17 +26,18 @@
         </div>
     </main>
     <div id="div-3">
-        <section id="gallows">
-            <p>gallows here</p>
-            <p id="word-to-guess">word to guess</p>
-        </section>
+        
+        <canvas id="canvas" width="215" height="215"></canvas>
+        
+        <span id="word-to-guess">word to guess</span>
     </div>
     <div id="div-4">
         <section id="letters-guessed">
             <p>letters guessed here</p>
-        </section> 
+        </section>
     </div>
     <script src="words.js"></script>
+    <script src="person.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
