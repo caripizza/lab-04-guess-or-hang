@@ -10,6 +10,9 @@
     background-color: gray;
 }
 
+#canvas {
+    background-color: pink;
+}
 #div-3 {
     background-color: blueviolet;
     height: 50vh;
@@ -31,7 +34,7 @@
 header {
     text-align: center;
 }
-section #word-to-guess {
+#word-to-guess {
     background-color: yellow;
     display: flex;
     justify-content: flex-end;
