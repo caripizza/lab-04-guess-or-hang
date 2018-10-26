@@ -64,7 +64,8 @@ function draw() {
       ctx.stroke();
       
       ctx.stroke(rectangle);
-      ctx.fill(circle);
-      
+      ctx.fill(circle);      
     }
   }
+
+
