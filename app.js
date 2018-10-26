@@ -1,5 +1,5 @@
 
-// get a random number between 0-8
+// get a random number between 0-8!
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
   
