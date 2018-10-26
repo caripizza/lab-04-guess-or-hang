@@ -1,10 +1,22 @@
 
-/* loadWord function:
-  1.Gets a random integer between 0 (inclusive) and length of words (exclusive max 10)    
-  2. select word from array - with that i
-   store in word var for use in guess func
-  3.set visibility of selected word, fully hide unused letter spaces 
-*/
+// get a random number between 0-8
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+  
+}
+
+  console.log(getRandomInt(8));
+
+//  2. select word from array - with that i
+
+
+
+
+// loadWord function: randomly select from index
+ 
+//   store in word var for use in guess func
+//  3.set visibility of selected word, fully hide unused letter spaces 
+
 /* guess function:
     1. called by submit of guessLetter form input submit
     2. read letter
@@ -23,5 +35,4 @@
          i. message user win/lose
          ii. disable guessletter button    
 */    
-/* call 'loadWord' function to start things
-
+// call 'loadWord' function to start things
