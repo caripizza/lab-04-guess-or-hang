@@ -1,20 +1,23 @@
 
 // get a random number between 0-8!
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-  
-}
 
-  console.log(getRandomInt(8));
+function randoWord() {
+  function getRandomInt() {
+  return Math.floor(Math.random() * 8 );
+  }
+  var randoNum = getRandomInt();
+  return words[randoNum];
+}
+var guessMe = randoWord();
+
+console.log(guessMe.length);
 
 //  2. select word from array - with that i
-
-
-
 
 // loadWord function: randomly select from index
  
 //   store in word var for use in guess func
+  
 //  3.set visibility of selected word, fully hide unused letter spaces 
 
 /* guess function:
@@ -33,6 +36,12 @@ function getRandomInt(max) {
          ii check for lose (guesses>body parts)
        f. if win or lose condition:
          i. message user win/lose
-         ii. disable guessletter button    
-*/    
+         ii. disable guess letter button    */    
+
+function guessTheWord() {
+  while (wrong-guesses <= 6) {
+    if (guess-entry == )
+  }
+}
+
 // call 'loadWord' function to start things
