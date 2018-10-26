@@ -2,40 +2,38 @@
     box-sizing: border-box;
 } */
 
-#div-1 {
+header {
+    text-align: center;
+}
+
+main.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+main #div-1 {
     background-color: green;
 }
 
-#div-2 {
+main #div-2 {
     background-color: gray;
 }
 
-#canvas {
-    /* background-color: pink; */
-}
 #div-3 {
- /*   background-color: blueviolet; */
-    height: 50vh;
+    background-color: blueviolet;
+}
 
+#div-3 #canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+#div-3 #word-to-guess {
+    background-color: yellow;
 }
 
 #div-4 {
     background-color: brown;
-    height: 10vh;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 10vh;
-  }
-
-header {
-    text-align: center;
-}
-#word-to-guess {
-    background-color: yellow;
-    display: flex;
-    justify-content: flex-end;
 }

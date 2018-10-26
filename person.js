@@ -10,6 +10,7 @@ function draw() {
       
       var rectangle = new Path2D();
       rectangle.rect(35, 180, 150, 30);
+      ctx.stroke();
       
       var circle = new Path2D();
       circle.moveTo(125, 35);
@@ -64,8 +65,9 @@ function draw() {
       ctx.stroke();
       
       ctx.stroke(rectangle);
-      ctx.fill(circle);      
+      ctx.fill(circle);   
+      
     }
-  }
+}
 
 
