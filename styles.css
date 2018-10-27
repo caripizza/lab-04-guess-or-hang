@@ -1,14 +1,15 @@
 * {
     font-family: Helvetica, sans-serif;
+    padding: 2px;
 }
 
-/* body > header */
+/* body > header text */
 header {
     text-align: center;
 }
 
 /* --------  This is the div1 and div2 container for guess and message  ------- */
-/* body > main > div1+div2 */
+/* body > main > div1 + div2 */
 main.flex-container {
     display: flex;
     flex-direction: row;
@@ -25,6 +26,7 @@ main #div-2 {
 /* body > div3 */
 #div-3 {
     background-color: blueviolet;
+    padding: 0px;
 }
 /* (gallows) */
 #div-3 #canvas {
@@ -48,23 +50,23 @@ main #div-2 {
 }
 
 /* --------  This is the div4 container for letters guessed  ------- */
-/* body > div4 (letters guessed) */
+/* body > div4 */
 #div-4 {
     background-color: brown;
-    
+    display: flex;
 }
 
 
 /* --------  Adds desktop 2-column display  ------- */
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 650px) {
     #div-3 {
-        display: flex;
-    }
-    #div-3 section {
-        
+        float: right;
+        width: 50%;
+        padding: 0px;
     }
     #div-4 {
-        display: flex;
-        
+        float: left;
+        width: 50%;
+        padding: 0px;
     }
 }

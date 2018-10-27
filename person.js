@@ -6,8 +6,8 @@ function draw() {
     if(canvas.getContext) {
         var ctx = canvas.getContext('2d');
   
-        ctx.fillStyle = 'red';
-        ctx.strokeStyle = 'blue';
+        ctx.fillStyle = 'black';
+        ctx.strokeStyle = 'black';
       
         var rectangle = new Path2D();
         rectangle.rect(35, 180, 150, 30);
@@ -66,7 +66,7 @@ function draw() {
         ctx.stroke();
       
         ctx.stroke(rectangle);
-        ctx.fill(circle);   
+        ctx.fill(circle);
       
     }
 }
