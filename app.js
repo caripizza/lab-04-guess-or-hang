@@ -1,8 +1,7 @@
 /* global words */
 /* eslint no-console: "off" */
 
-// get a random number between 0-8!
-
+// get a random number between 0-8, then return matching word from array index
 function randoWord() {
     function getRandomInt() {
         return Math.floor(Math.random() * 8 );
@@ -11,11 +10,18 @@ function randoWord() {
     return words[randoNum];
 }
 
+// display random number with words array in console log
 var guessMe = randoWord();
+console.log(guessMe.length, words);
+console.log(guessMe);
+var res = guessMe.split('');
+console.log(res);
+var letter1 = res[1];
+console.log(letter1);
 
-console.log(guessMe.length);
 
-//  2. select word from array - with that i
+
+
 
 // loadWord function: randomly select from index
 
@@ -41,10 +47,10 @@ console.log(guessMe.length);
         i. message user win/lose
         ii. disable guess letter button    */
 
-/*function guessTheWord() {
+/* function guessTheWord() {
  while (wrong-guesses <= 6) {
    if (guess-entry == )
  }
-}*/
+} */
 
 // call 'loadWord' function to start things

@@ -16,8 +16,8 @@
             <section>
                 <!--<p id="word-length">Your word is +  "guessMe.length" letters long.</p>-->
                 <label for="guess">Guess the letter:<br /></label>
-                <input type="text" maxlength="1" id="guess-entry" placeholder=" (a-z)" />
-                <button type="submit" onclick="guessTheWord()" id="guess-button">Guess!</button>
+                <input type="text" maxlength="1" id="guess-entry" name="guess-entry" placeholder=" (a-z)" required/>
+                <button type="submit" onclick="guessTheWord()" id="guess-button" name="guess-button">Guess!</button>
                 <!-- <input type="submit" value="Go! onclick="guessTheWord()"-->
             </section>
         </div>
@@ -34,7 +34,7 @@
         <section id="word-to-guess">
             Your word:
             <ul class="word-list">
-                <li class="hidden" id="letter-1">1</li>
+                <li class="hidden" id="letter-1">&nbsp;&nbsp;</li>
                 <li class="hidden" id="letter-2">2</li>
                 <li class="hidden" id="letter-3">3</li>
                 <li class="hidden" id="letter-4">4</li>
