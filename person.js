@@ -1,5 +1,6 @@
 /* exported draw */
 
+// based on Drawing shapes with canvas https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 function draw() {
     var canvas = document.getElementById('canvas');
     if(canvas.getContext) {
