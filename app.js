@@ -2,12 +2,13 @@
 
 
 function randoWord() {
- function getRandomInt() {
- return Math.floor(Math.random() * 8 );
- }
- var randoNum = getRandomInt();
- return words[randoNum];
+  function getRandomInt() {
+  return Math.floor(Math.random() * 8 );
 }
+  var randoNum = getRandomInt();
+  return words[randoNum];
+}
+
 var guessMe = randoWord();
 
 console.log(guessMe.length);

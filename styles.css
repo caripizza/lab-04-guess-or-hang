@@ -30,10 +30,14 @@ main #div-2 {
     margin: 0 auto;
 }
 
-#div-3 #word-to-guess {
+#word-to-guess {
     background-color: yellow;
 }
 
 #div-4 {
     background-color: brown;
+}
+
+li.hidden {
+    display: none;
 }
