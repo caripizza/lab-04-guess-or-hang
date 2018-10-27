@@ -14,9 +14,11 @@
     <main class="flex-container">
         <div id="div-1">
             <section>
-                <label for="guess">Your Guess:</label>
+                <!--<p id="word-length">Your word is +  "guessMe.length" letters long.</p>-->
+                <label for="guess">Guess the letter:</label>
                 <input type="text" id="guess-entry" placeholder="(a-z)" />
-				<input type="submit" value="Go!" id="submit" />
+                <button onclick="guessTheWord()" id="guess-button">Guess!</button>
+                <!-- <input type="submit" value="Go! onclick="guessTheWord()"-->
             </section>
         </div>
         <div id="div-2">
