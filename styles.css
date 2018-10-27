@@ -3,24 +3,53 @@
     padding: 2px;
 }
 
+
 /* body > header text */
 header {
     text-align: center;
 }
+h1 {
+    font-size: 30px;
+    color: purple;
+    margin: 0 auto;
+}
+body {
+    margin: 0 auto;
+}
+
 
 /* --------  This is the div1 and div2 container for guess and message  ------- */
 /* body > main > div1 + div2 */
 main.flex-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    padding: 0px;
 }
 main #div-1 {
     background-color: green;
+    margin: 0px;
+    width: 100%;
+}
+main #div-1 input {
+    width: 60px;
+    height: 28px;
+    font-size: 18px;
+    margin-left: 2em;
+    padding: 0px;
+}
+main #div-1 button {
+    width: 74px;
+    height: 34px;
+    font-size: 18px;
+    border: 2px solid blue;
+    padding: 0px;
+    border-radius: 5px;
 }
 main #div-2 {
     background-color: gray;
+    width: 100%;
 }
+
 
 /* --------  This is the div3 container for gallows  ------- */
 /* body > div3 */
@@ -49,6 +78,7 @@ main #div-2 {
     text-decoration: underline;
 }
 
+
 /* --------  This is the div4 container for letters guessed  ------- */
 /* body > div4 */
 #div-4 {
@@ -58,7 +88,7 @@ main #div-2 {
 
 
 /* --------  Adds desktop 2-column display  ------- */
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 750px) {
     #div-3 {
         float: right;
         width: 50%;
@@ -67,6 +97,12 @@ main #div-2 {
     #div-4 {
         float: left;
         width: 50%;
-        padding: 0px;
+        padding-bottom: 220px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    main.flex-container {
+        float: left;
+        width: 50%;
     }
 }
