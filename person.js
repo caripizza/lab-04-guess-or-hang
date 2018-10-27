@@ -8,6 +8,7 @@ function draw() {
   
         ctx.fillStyle = 'black';
         ctx.strokeStyle = 'black';
+        ctx.lineWidth = '2';
       
         var rectangle = new Path2D();
         rectangle.rect(35, 180, 150, 30);
@@ -65,7 +66,7 @@ function draw() {
         ctx.lineTo(150, 180);
         ctx.stroke();
       
-        ctx.stroke(rectangle);
+        ctx.fill(rectangle);
         ctx.fill(circle);
       
     }

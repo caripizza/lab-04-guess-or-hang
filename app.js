@@ -4,7 +4,6 @@
 // get a random number between 0-8!
 
 function randoWord() {
-
     function getRandomInt() {
         return Math.floor(Math.random() * 8 );
     }
