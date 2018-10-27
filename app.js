@@ -1,12 +1,15 @@
+/* global words */
+/* eslint no-console: "off" */
+
 // get a random number between 0-8!
 
-
 function randoWord() {
-  function getRandomInt() {
-  return Math.floor(Math.random() * 8 );
-}
-  var randoNum = getRandomInt();
-  return words[randoNum];
+
+    function getRandomInt() {
+        return Math.floor(Math.random() * 8 );
+    }
+    var randoNum = getRandomInt();
+    return words[randoNum];
 }
 
 var guessMe = randoWord();
