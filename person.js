@@ -5,8 +5,8 @@ function draw() {
     if(canvas.getContext) {
         var ctx = canvas.getContext('2d');
   
-        ctx.fillStyle="red";
-        ctx.strokeStyle="blue";
+        ctx.fillStyle = 'red';
+        ctx.strokeStyle = 'blue';
       
         var rectangle = new Path2D();
         rectangle.rect(35, 180, 150, 30);
