@@ -1,11 +1,8 @@
-# Create an interactive Guess or Hang ("Hang Person") game
 
-Create a word guessing game that:
-
-1. Randomly selects a word from a list of words
-1. Shows line blanks for each letter of the word that was selected
+1. Randomly selects a word from a list of words **f loadWord()**
+1. Shows line blanks for each letter of the word that was selected **DONE**
 1. Allows the users to enter one letter "guess" at a time.
-    1. If the guess is correct, show all occurances of that letter in the word
+    1. If the guess is correct, show all occurrences of that letter in the word
     1. If the guess is incorrect, add a body part to the gallows
 1. Keep track of guessed letters
 1. If the user guesses all of the letters in the word, let them know they have "won"
@@ -44,13 +41,10 @@ Don't forget to include a script tag with `src` for this file _before_ the `app.
 Create a file `app.js` that exposes functions for running the game. 
 Don't forget to include a script tag with `src` for this file.
 
-1. Create a `loadWord` function that
-    1. Gets a random integer between 0 (inclusive) and length of words (exclusive)
-    1. Selects the word from the array with that index and store in a `word` variable for use by the guess function (`word` 
-    will need to be scoped in way guess function can read.
-    1. Set the visibility on the letters of the "Word to Guess" to hidden and fully hide 
-    (no line blank) any unused letter spaces. (You might not hide them initially during development so you can "see" that
-    word is loading correctly. Otherwise, you will need to inspect with the Dev Tools)
+1. Create a `loadWord` function that 
+    1. Gets a random integer between 0 (inclusive) and length of words (exclusive) **DONE**
+    1. Selects the word from the array with that index and store in a `word` variable for use by the guess function. (`word`) will need to be scoped in way guess function can read. **DONE**
+    1. Set the visibility on the letters of the "Word to Guess" to hidden and fully hide (no line blank) any unused letter spaces. (You might not hide them initially during development so you can "see" that word is loading correctly. Otherwise, you will need to inspect with the Dev Tools) **DONE**
 1. Create a `guess` function that
     1. Is called by the submit of the Guess Letter form
     1. Reads the letter from the Guess Letter input (either use form.elements, or directly reference the letter input by Id, as that is the only form control we care about).

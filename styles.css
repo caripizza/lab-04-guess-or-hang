@@ -72,13 +72,21 @@ main #div-2 {
 /* (word to guess with blanks) */
 #div-3 section ul {
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     font-size: 2em;
     background-color: aqua;
+    color: red;
 }
 #div-3 section ul li {
     display: flex;
-    text-decoration: underline;
+}
+
+li {
+    color: red; /* MAKE ME TRANSPARENT */
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    width: .5em;
+    margin: 0 5px 0 5px;
 }
 
 /* --------  This is the div4 container for letters guessed  ------- */
@@ -109,6 +117,18 @@ main #div-2 {
     }
 }
 
-.hidden {
+li.hidden {
     display: none;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    width: .5em;
+    margin: 0 5px 0 5px;
 }
+
+.correct {
+    background-color: lime;
+  }
+  
+.incorrect {
+    background-color: fuchsia;
+  }

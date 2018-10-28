@@ -1,15 +1,12 @@
 /* global words */
 /* eslint no-console: "off"*/
+/* exported guess resetLetterGuess */
 
-
+/*
 // put letter count in DOM via list items
 var letterCount = document.getElementsByClassName('.letter');
 letterCount.textContent = res;
-
-/*  Not sure we need this? 
-var tries = 0; // define tries
-var triesSpan = document.getElementById('tries'); // reference tries */
-
+/*
 
 /* ---------------- 1). Randomly select a word from the array of 8 words ---------------- */
 function loadWord() {
@@ -20,53 +17,10 @@ function loadWord() {
     return words[randoNum]; // grab word from array by matching index number
 }
 var word = loadWord();
-/* console.log(word.length, words); // return the word length from array, with array */
-/* console.log(word); // return the word from array */
 var res = word.split('');
 
 
-
-
-
-
-/* Inject word random word letters into lis 
-var letter1 = res[0];
-var letter2 = res[1];
-var letter3 = res[2];
-var letter4 = res[3];
-var letter5 = res[4];
-var letter6 = res[5];
-var letter7 = res[6];
-var letter8 = res[7];
-var letter9 = res[8];
-var letter10 = res[9];
-
-document.getElementById('letter-1').innerHTML = letter1;
-document.getElementById('letter-2').innerHTML = letter2;
-document.getElementById('letter-3').innerHTML = letter3;
-document.getElementById('letter-4').innerHTML = letter4;
-
-if(res[4] !== null) {
-    document.getElementById('letter-5').innerHTML = letter5;
-}
-if(res[5] !== null) {
-    document.getElementById('letter-6').innerHTML = letter6;
-}
-if(res[6] !== null) {
-    document.getElementById('letter-7').innerHTML = letter7;
-}
-if(res[7] !== null) {
-    document.getElementById('letter-8').innerHTML = letter8;
-}
-if(res[8] !== null) {
-    document.getElementById('letter-9').innerHTML = letter9;
-}
-if(res[9] !== null) {
-    document.getElementById('letter-10').innerHTML = letter10;
-}
-*/
-
-// Hide extra letters if word is longer
+/* ---------------- 2). Show line blanks for each letter of the word that was selected ---------------- */
 var letters = document.querySelectorAll('.letter');
 for(var i = 0; i < letters.length; i++) {
     var li = letters[i];
@@ -79,6 +33,62 @@ for(var i = 0; i < letters.length; i++) {
         li.classList.add('hidden');
     }
 }
+
+/* ---------------- 3. Allows the users to enter one letter "guess" at a time. ---------------- */
+var guessLetterForm = document.getElementById('guess-letter-form');
+var guessLetterResponse = document.getElementById('guess-letter-response');
+
+var guessCount = res.length;
+var correct = 0;
+var incorrect = 0;
+
+function guess() {
+    var elements = guessLetterForm.elements;
+    var guess1 = elements.number.value;
+    var submit = elements.guess1;
+
+    var guessInput = elements.guess;
+    var enteredGuess = guessInput.value;
+
+    if(enteredGuess === res[0]) {
+        correct = correct + 1;
+        guessInput.classList.add('correct');
+        guessInput.classList.remove('incorrect');
+    }
+    else if(enteredGuess !== '') {
+        incorrect += 1;
+        guessInput.classList.add('incorrect');
+        guessInput.classList.remove('correct');
+    }
+}
+
+    /*
+    if(guess === 'letter-1') {
+        guessLetterResponse.textContent = 'You got it!';
+        submit.disabled = true;
+    }
+    else {
+        guessCount += 1;
+        incorrect += 1;
+
+        if(guessCount < 5) {
+            guessLetterResponse.textContent = 'Nope, try again! You got ' + correct + ' out of ' + incorrect + ' chances.';
+        }
+        else {
+            guessLetterResponse.textContent = 'Bummer, you lose. You got ' + incorrect + ' chances.';
+            submit.disabled = true;
+        }*/
+    
+
+
+function resetLetterGuess() {
+    var elements = guessLetterForm.elements;
+    var submit = elements.guess;
+    // submit.disabled = false;
+    guessCount = 0;
+    guessLetterResponse.textContent = '';
+}
+
 
 
 
@@ -106,7 +116,3 @@ for(var i = 0; i < letters.length; i++) {
       f. if win or lose condition:
         i. message user win/lose
         ii. disable guess letter button    */
-
-
-
-// call 'loadWord' function to start things /

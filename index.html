@@ -14,12 +14,15 @@
     <main class="flex-container">
         <div id="div-1">
             <section>
-                <form id="guess-letter-form">
+                <form id="guess-letter-form" 
+                onsubmit="event.preventDefault(); guess();" 
+                onreset="resetLetterGuess();" 
+                >
                     <label for="guess">Guess the letter:<br /></label>
-                    <input type="text" maxlength="1" id="guess-entry" name="guess-entry" placeholder=" (a-z)" required/>
+                    <input type="text" maxlength="1" id="guess-entry" name="guess" placeholder=" (a-z)" required/>
                         <div>
-                            <button type="submit" onclick="guessTheWord()" id="guess-button" name="guess-button">Guess!</button>
-                            <button type="reset" name="play-again">Retry</button>
+                            <button type="submit">Guess!</button>
+                            <button type="reset">Retry</button>
                         </div>
                 </form>
 
@@ -27,7 +30,7 @@
         </div>
         <div id="div-2">
             <section>
-                <p>You have <span id="tries"></span> left.</p>
+                <p id="guess-letter-response"></p>
             </section>
         </div>
     </main>
@@ -35,7 +38,7 @@
         <canvas id="canvas" width="215" height="215"></canvas>
         
         <section id="word-to-guess-container">
-            Your word:
+            Word to guess:
             <ul class="word-to-guess">
                 <li class="letter hidden" id="letter-1"></li>
                 <li class="letter hidden" id="letter-2"></li>
