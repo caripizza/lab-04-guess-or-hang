@@ -66,7 +66,7 @@ main #div-2 {
     margin: 0 auto;
 }
 /* (word to guess container) */
-#div-3 section#word-to-guess {
+#div-3 section#word-to-guess-container {
     background-color: yellow;
 }
 /* (word to guess with blanks) */
@@ -81,7 +81,6 @@ main #div-2 {
     text-decoration: underline;
 }
 
-
 /* --------  This is the div4 container for letters guessed  ------- */
 /* body > div4 */
 #div-4 {
@@ -91,7 +90,7 @@ main #div-2 {
 
 
 /* --------  Adds desktop 2-column display  ------- */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
     #div-3 {
         float: right;
         width: 50%;
@@ -108,4 +107,8 @@ main #div-2 {
         float: left;
         width: 50%;
     }
+}
+
+.hidden {
+    display: none;
 }
