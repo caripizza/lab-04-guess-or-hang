@@ -14,15 +14,14 @@
     <main class="flex-container">
         <div id="div-1">
             <section>
-                <form id="guess-letter-form" 
-                onsubmit="event.preventDefault(); guess();" 
-                onreset="resetLetterGuess();" 
-                >
+                <form id="guess-letter-form">
+                    <div>
+                       <!-- <button onclick="loadWord();">Play</button> -->
+                    </div>
                     <label for="guess">Guess the letter:<br /></label>
-                    <input type="text" maxlength="1" id="guess-entry" name="guess" placeholder=" (a-z)" required/>
-                        <div>
-                            <button type="submit">Guess!</button>
-                            <button type="reset">Retry</button>
+                    <input type="text" name="guess-input" maxlength="1" placeholder=" (a-z)"/> <!-- ADD required -->
+                    <div>
+                        <button type="submit">Guess!</button>
                         </div>
                 </form>
 
@@ -30,7 +29,7 @@
         </div>
         <div id="div-2">
             <section>
-                <p id="guess-letter-response"></p>
+                <p id="guess-letter-response">A place to show messages (like win or lose). Shows how many guesses have been made, </p>
             </section>
         </div>
     </main>
@@ -55,7 +54,8 @@
     </div>
     <div id="div-4">
         <section id="letters-guessed">
-            <p>letters guessed here</p>
+            <p>A list of letters guessed so far:</p>
+            <pre id="incorrect-letters-guessed"></pre>
         </section>
     </div>
     <script src="words.js"></script>
